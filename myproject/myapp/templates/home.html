@@ -5,32 +5,137 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>WANDER SOLO</title>
-    <link rel="stylesheet" href="styles.css"> <!-- Link to external CSS (if you have one) -->
     <style>
+        /* Global Styles */
         body {
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
             background-color: #f4f4f4;
+            color: #990b0b;
+            position: relative;
         }
 
+        /* Header Section */
         header {
-            background-color: #333;
+            background-color: #009688;
             color: white;
             padding: 20px;
             text-align: center;
+            font-size: 2em;
         }
 
+        header p {
+            font-style: italic;
+            font-size: 1.2em;
+        }
+
+        /* Navigation Bar */
+        nav {
+            background-color: #00796b;
+            padding: 10px;
+            text-align: center;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            padding: 10px;
+            font-size: 1.1em;
+            margin: 0 15px;
+        }
+
+        nav a:hover {
+            background-color: #004d40;
+            border-radius: 5px;
+        }
+
+        /* Search Bar at the Top */
+        .search-bar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            padding: 10px 20px;
+            background-color: #ffffff;
+            z-index: 2;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        .search-bar input[type="text"] {
+            padding: 10px;
+            width: 60%;
+            font-size: 1em;
+            border-radius: 5px;
+            border: 1px solid #00796b;
+        }
+
+        .search-bar button {
+            padding: 10px 20px;
+            background-color: #00796b;
+            color: white;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+            margin-left: 10px;
+        }
+
+        .search-bar button:hover {
+            background-color: #004d40;
+        }
+
+        /* Sign Up and Login Links on the Side */
+        .auth-links {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            z-index: 3;
+        }
+
+        .auth-links a {
+            background-color: #00796b;
+            color: white;
+            padding: 10px 15px;
+            text-decoration: none;
+            margin: 5px;
+            border-radius: 5px;
+            font-weight: bold;
+        }
+
+        .auth-links a:hover {
+            background-color: #004d40;
+        }
+
+        /* Container for Main Content */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            margin-top: 80px; /* Space for the fixed search bar */
+        }
+
+        /* Sections */
         .section {
             padding: 20px;
             margin: 20px 0;
             background-color: white;
-            border-radius: 8px;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .section:hover {
+            transform: scale(1.05);
+            background-color: #e0f2f1;
         }
 
         h2 {
-            color: #333;
+            color: #00796b;
+            font-size: 1.8em;
+            border-bottom: 2px solid #00796b;
+            padding-bottom: 10px;
+            margin-bottom: 10px;
         }
 
         ul {
@@ -39,20 +144,84 @@
         }
 
         li {
-            margin: 10px 0;
+            margin: 15px 0;
+            font-size: 1.1em;
         }
 
+        li a {
+            color: #00796b;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        li a:hover {
+            text-decoration: underline;
+        }
+
+        /* Footer Section */
         footer {
-            background-color: #333;
+            background-color: #00796b;
             color: white;
             text-align: center;
             padding: 20px;
+            font-size: 1.2em;
         }
 
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
+        footer a {
+            color: #ecf0f1;
+            text-decoration: none;
         }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        /* Layout for Card Sections */
+        .card {
+            background-color: #ffffff;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            margin: 20px;
+            transition: transform 0.3s ease;
+        }
+
+        .card:hover {
+            transform: scale(1.05);
+        }
+
+        .card img {
+            width: 100%;
+            border-radius: 8px;
+            margin-bottom: 15px;
+        }
+
+        .card h3 {
+            font-size: 1.5em;
+            color: #009688;
+        }
+
+        /* Responsive Design */
+        @media screen and (max-width: 768px) {
+            nav {
+                padding: 15px;
+                text-align: left;
+            }
+
+            .section {
+                padding: 15px;
+            }
+
+            footer {
+                font-size: 1em;
+                padding: 15px;
+            }
+
+            .search-bar {
+                width: 80%;
+            }
+        }
+
     </style>
 </head>
 
@@ -61,27 +230,58 @@
     <!-- Header Section -->
     <header>
         <h1>Wander Solo</h1>
-        <p>"Solo, But Never Alone – Let Your Adventure Begin."
-        </p>
+        <p>"Solo, But Never Alone – Let Your Adventure Begin."</p>
     </header>
 
+    <!-- Navigation Bar -->
+    <nav>
+        <a href="#food">Food Spots</a>
+        <a href="#expenses">Expenses</a>
+        <a href="#shopping">Shopping</a>
+        <a href="#tourist-places">Tourist Places</a>
+        <a href="#transportation">Transportation</a>
+    </nav>
+
+    <!-- Centered Search Bar -->
+    <div class="search-bar">
+        <form action="" method="get">
+            <input type="text" name="search" placeholder="Search...">
+            <button type="submit">Search</button>
+        </form>
+    </div>
+
+    <!-- Sign Up and Login Links -->
+    <div class="auth-links">
+        <a href="signup.html">Sign Up</a>
+        <a href="login.html">Login</a>
+    </div>
+
+    <!-- Main Content Container -->
     <div class="container">
 
         <!-- Main Food Spots Section -->
         <div class="section" id="food">
             <h2>Main Food Spots</h2>
-            <p>Discover the best food spots for solo travelers. Whether you're into street food or fine dining, here are some top picks:</p>
-            <ul>
-                <li>Restaurant 1 - A popular spot for local cuisine.</li>
-                <li>Food Street - Famous for street food stalls and snacks.</li>
-                <li>Luxury Dining - A high-end restaurant with a great view of the city.</li>
-            </ul>
+            <div class="card">
+                <img src="restaurant1.jpg" alt="Restaurant Image">
+                <h3><a href="homer/">Restaurant 1</a></h3>
+                <p>A popular spot for local cuisine.</p>
+            </div>
+            <div class="card">
+                <img src="foodstreet.jpg" alt="Food Street Image">
+                <h3><a href="homer2/">Food Street</a></h3>
+                <p>Famous for street food stalls and snacks.</p>
+            </div>
+            <div class="card">
+                <img src="luxurydining.jpg" alt="Luxury Dining Image">
+                <h3><a href="homer3/">Luxury Dining</a></h3>
+                <p>A high-end restaurant with a great view of the city.</p>
+            </div>
         </div>
 
         <!-- Expenses Section -->
         <div class="section" id="expenses">
             <h2>Expenses</h2>
-            <p>Understand the approximate costs of a solo trip in your chosen destination:</p>
             <ul>
                 <li>Daily Food Budget: $20 - $50</li>
                 <li>Accommodation (per night): $30 - $150</li>
@@ -93,115 +293,39 @@
         <!-- Shopping Malls Section -->
         <div class="section" id="shopping">
             <h2>Shopping Malls</h2>
-            <p>Great places to shop and enjoy solo travel:</p>
             <ul>
-                <li>Shopping Mall 1 - Known for its wide variety of international brands.</li>
-                <li>Market Place - A local market with unique handcrafted items.</li>
-                <li>Luxury Mall - Offers high-end brands and a premium experience.</li>
+                <li><a href="shoppingmall1/">Shopping Mall 1</a> - Known for its wide variety of international brands.</li>
+                <li><a href="marketplace.html">Market Place</a> - A local market with unique handcrafted items.</li>
+                <li><a href="luxurymall.html">Luxury Mall</a> - Offers high-end brands and a premium experience.</li>
             </ul>
         </div>
 
-        <!-- Tourist Places Section -->
-        <div class="section" id="tourist-places">
+        <!-- Tourist Places -->
+        <div class="section" id="Places">
             <h2>Tourist Places</h2>
-            <p>Must-visit attractions to explore during your trip:</p>
             <ul>
-                <li>Landmark 1 - A historical site with beautiful architecture.</li>
-                <li>Park & Gardens - A peaceful place to relax and unwind.</li>
-                <li>Mountain Viewpoint - For breathtaking views of the city and beyond.</li>
+                <li><a href="paris.html">Paris</a> - City of Love.</li>
+                <li><a href="thailand.html">Thailand</a> - From golden temples to turquoise beaches, Thailand is a paradise waiting to be explored.</li>
+                <li><a href="kashmir.html">Kashmir</a> - Kashmir: A land of misty mornings, stunning lakes, and endless beauty.</li>
             </ul>
         </div>
 
-        <!-- Hospitals Section -->
-        <div class="section" id="hospitals">
-            <h2>Hospitals & Emergency Contacts</h2>
-            <p>Know where the nearest hospital and emergency services are:</p>
+         <!-- Transportation -->
+         <div class="section" id="Transportation">
+            <h2>Transportations</h2>
             <ul>
-                <li>Hospital 1 - Located near the city center, open 24/7.</li>
-                <li>Hospital 2 - Specializes in travel-related health services.</li>
-                <li>Emergency Hotline - 112 (for medical and police emergencies).</li>
+                <li><a href="bus.html">Bus</a></li>
+                <li><a href="metro.html">Metro</a></li>
+                <li><a href="flights.html">Flights</a></li>
             </ul>
         </div>
 
-        <!-- Transportation Section -->
-        <div class="section" id="transportation">
-            <h2>Transportation</h2>
-            <p>Options to get around safely and efficiently:</p>
-            <ul>
-                <li>Public Transit - Buses, trains, and trams are available for easy travel.</li>
-                <li>Taxi Service - Safe and reliable taxis are available at all times.</li>
-                <li>Bicycle Rentals - Ideal for solo explorers.</li>
-            </ul>
-        </div>
 
-        <!-- Currency Exchange Section -->
-        <div class="section" id="currency-exchange">
-            <h2>Currency Exchange</h2>
-            <p>Find where to exchange your currency for the local one:</p>
-            <ul>
-                <li>Currency Exchange Center 1 - Offers great rates for foreign currency.</li>
-                <li>Airport Exchange - Convenient exchange at the airport, but with slightly higher fees.</li>
-            </ul>
-        </div>
-
-        <!-- Transactions Section -->
-        <div class="section" id="transactions">
-            <h2>Transactions & Payments</h2>
-            <p>Make sure you can handle all payments without a hassle:</p>
-            <ul>
-                <li>Credit Cards - Accepted at most major shops and restaurants.</li>
-                <li>Mobile Payments - Use apps like Apple Pay and Google Pay.</li>
-                <li>ATMs - Widely available for withdrawing local currency.</li>
-            </ul>
-        </div>
-
-        <!-- Airports Section -->
-        <div class="section" id="airports">
-            <h2>Airports</h2>
-            <p>Key airports for arrival and departure:</p>
-            <ul>
-                <li>Airport 1 - Located 20 minutes from the city center.</li>
-                <li>Airport 2 - The busiest airport with international and domestic flights.</li>
-            </ul>
-        </div>
-
-        <!-- Accommodation Section -->
-        <div class="section" id="accommodation">
-            <h2>Accommodation</h2>
-            <p>Find your perfect place to stay during your solo trip:</p>
-            <ul>
-                <li>Budget Hostel - Affordable and ideal for solo travelers.</li>
-                <li>Mid-range Hotel - Comfortable and in a central location.</li>
-                <li>Luxury Resort - Offers all-inclusive packages and premium services.</li>
-            </ul>
-        </div>
-
-        <!-- Safety Measures Section -->
-        <div class="section" id="safety">
-            <h2>Safety Measures</h2>
-            <p>Ensure your safety throughout the trip:</p>
-            <ul>
-                <li>Always keep your belongings close.</li>
-                <li>Use reputable transport services.</li>
-                <li>Know the emergency numbers in your destination.</li>
-            </ul>
-        </div>
-
-        <!-- Tips and Suggestions Section -->
-        <div class="section" id="tips">
-            <h2>Travel Tips & Suggestions</h2>
-            <p>Helpful tips for a smooth solo trip experience:</p>
-            <ul>
-                <li>Stay in touch with family or friends regularly.</li>
-                <li>Carry a portable charger for your phone.</li>
-                <li>Trust your instincts and avoid risky situations.</li>
-            </ul>
-        </div>
     </div>
 
     <!-- Footer Section -->
     <footer>
-        <p>&copy; 2025 Solo Trip Planner | All rights reserved</p>
+        <p>&copy; 2025 Wander Solo | All rights reserved. <a href="#">Privacy Policy</a></p>
     </footer>
 
 </body>

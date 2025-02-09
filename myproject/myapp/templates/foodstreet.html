@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Food Street</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f7f7f7;
+            color: #333;
+        }
+
+        header {
+            background-color: #ff6347;
+            color: white;
+            text-align: center;
+            padding: 50px;
+            font-size: 2.5rem;
+            letter-spacing: 2px;
+        }
+
+        header p {
+            font-size: 1.2rem;
+            margin-top: 10px;
+        }
+
+        .container {
+            width: 90%;
+            margin: auto;
+            max-width: 1200px;
+        }
+
+        .section {
+            margin: 40px 0;
+        }
+
+        .offers,
+        .ratings,
+        .location,
+        .feedback {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+
+        .card {
+            background-color: #ffffff;
+            border-radius: 15px;
+            padding: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            margin: 10px;
+            flex-basis: 23%;
+            transition: transform 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+        }
+
+        .card h3 {
+            font-size: 1.5rem;
+            color: #ff6347;
+            margin-bottom: 15px;
+        }
+
+        .offer-card {
+            background-color: #ffedc3;
+        }
+
+        .offer-card:hover {
+            background-color: #ffd700;
+        }
+
+        .rating-card {
+            background-color: #f0f8ff;
+        }
+
+        .rating-card:hover {
+            background-color: #87cefa;
+        }
+
+        .location-card {
+            background-color: #e0f7fa;
+        }
+
+        .location-card:hover {
+            background-color: #00bcd4;
+        }
+
+        .feedback-card {
+            background-color: #fff3e0;
+        }
+
+        .feedback-card:hover {
+            background-color: #ffcc80;
+        }
+
+        .rating span {
+            color: #ffbc00;
+        }
+
+        .location iframe {
+            width: 100%;
+            height: 250px;
+            border-radius: 10px;
+        }
+
+        .feedback form input,
+        .feedback form textarea {
+            width: 100%;
+            padding: 12px;
+            margin: 10px 0;
+            border-radius: 10px;
+            border: 1px solid #ddd;
+            font-size: 1rem;
+        }
+
+        .feedback form button {
+            background-color: #ff6347;
+            color: white;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            font-size: 1.1rem;
+            transition: background-color 0.3s ease;
+        }
+
+        .feedback form button:hover {
+            background-color: #ff4500;
+        }
+
+        .footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+
+        .footer a {
+            color: #ff6347;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        @media (max-width: 768px) {
+            .card {
+                flex-basis: 48%;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .card {
+                flex-basis: 100%;
+            }
+
+            header {
+                font-size: 1.8rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>Welcome to Food Street</h1>
+        <p>Your ultimate destination for mouth-watering food and great deals!</p>
+    </header>
+
+    <div class="container">
+
+        <!-- Offers Section -->
+        <div class="section offers">
+            <div class="card offer-card">
+                <h3>Special Offer 1</h3>
+                <p>Enjoy 20% off your first order! A great way to kickstart your food adventure.</p>
+            </div>
+            <div class="card offer-card">
+                <h3>Buy 1 Get 1 Free</h3>
+                <p>Buy one appetizer and get another one free! Perfect for sharing with friends.</p>
+            </div>
+            <div class="card offer-card">
+                <h3>Happy Hour</h3>
+                <p>50% off all drinks from 5 PM to 7 PM. Come thirsty, leave happy!</p>
+            </div>
+        </div>
+
+        <!-- Ratings Section -->
+        <div class="section ratings">
+            <div class="card rating-card">
+                <h3>Customer Ratings</h3>
+                <p>Overall Rating: <span class="rating">★★★★☆</span></p>
+                <p>Food Quality: ★★★★☆</p>
+                <p>Service: ★★★★☆</p>
+                <p>Ambience: ★★★★☆</p>
+            </div>
+        </div>
+
+        <!-- Location Section -->
+        <div class="section location">
+            <div class="card location-card">
+                <h3>Our Location</h3>
+                <p>123 Food Street, Gourmet City, Foodland</p>
+                <iframe src="https://www.google.com/maps/embed/v1/place?q=Food+Street&key=YOUR_GOOGLE_MAP_API_KEY" allowfullscreen></iframe>
+            </div>
+        </div>
+
+        <!-- Feedback Section -->
+        <div class="section feedback">
+            <div class="card feedback-card">
+                <h3>Leave Your Feedback</h3>
+                <form action="#" method="POST">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" required>
+
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+
+                    <label for="feedback">Feedback:</label>
+                    <textarea id="feedback" name="feedback" rows="4" required></textarea>
+
+                    <button type="submit">Submit Feedback</button>
+                </form>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="footer">
+        <p>&copy; 2025 Food Street. All rights reserved. <br> Follow us on <a href="#">Instagram</a>, <a href="#">Facebook</a></p>
+    </div>
+
+</body>
+
+</html>

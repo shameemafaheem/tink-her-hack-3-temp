@@ -1,0 +1,183 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Restaurant Guide</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+
+        header {
+            background-color: #ff6347;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+
+        h1 {
+            margin: 0;
+            font-size: 2.5em;
+        }
+
+        h2 {
+            color: #333;
+            font-size: 2em;
+            margin-bottom: 10px;
+        }
+
+        .restaurant {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            margin: 20px;
+        }
+
+        .restaurant-card {
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            width: 45%;
+            margin: 10px;
+            padding: 20px;
+            transition: transform 0.3s;
+        }
+
+        .restaurant-card:hover {
+            transform: scale(1.05);
+        }
+
+        .restaurant-img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 10px;
+        }
+
+        .details {
+            margin-top: 15px;
+        }
+
+        .rating {
+            font-size: 1.1em;
+            font-weight: bold;
+            color: #ff6347;
+        }
+
+        .location {
+            font-size: 1em;
+            color: #555;
+        }
+
+        .feedback {
+            font-size: 0.9em;
+            color: #777;
+            margin-top: 10px;
+        }
+
+        .feedback ul {
+            padding: 0;
+            list-style: none;
+        }
+
+        .feedback li {
+            margin-bottom: 8px;
+        }
+
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            margin-top: 40px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Header Section -->
+    <header>
+        <h1>Restaurant Guide</h1>
+        <p>Explore the best restaurants around you</p>
+    </header>
+
+    <!-- Restaurant Details Section -->
+    <div class="container">
+        <h2>Top Restaurants</h2>
+
+        <!-- Restaurant 1 -->
+        <div class="restaurant">
+            <div class="restaurant-card">
+                <img src="C:\Users\aisha\OneDrive\Desktop\res1.jpg" alt="Restaurant 1" class="restaurant-img">
+                <div class="details">
+                    <h3>Restaurant 1</h3>
+                    <p class="rating">Rating: 4.5/5</p>
+                    <p class="location">Location: Downtown City</p>
+                    <div class="feedback">
+                        <h4>Feedback:</h4>
+                        <ul>
+                            <li>"Great ambiance and food!"</li>
+                            <li>"Perfect for a family outing."</li>
+                            <li>"Highly recommend the pasta dishes."</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Restaurant 2 -->
+            <div class="restaurant-card">
+                <img src="C:\Users\aisha\OneDrive\Desktop\res1.jpg" alt="Restaurant 2" class="restaurant-img">
+                <div class="details">
+                    <h3>Restaurant 2</h3>
+                    <p class="rating">Rating: 4.2/5</p>
+                    <p class="location">Location: Riverside</p>
+                    <div class="feedback">
+                        <h4>Feedback:</h4>
+                        <ul>
+                            <li>"Cozy and romantic atmosphere."</li>
+                            <li>"Great for a date night."</li>
+                            <li>"Delicious seafood platter."</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Restaurant 3 -->
+        <div class="restaurant">
+            <div class="restaurant-card">
+                <img src="restaurant3.jpg" alt="Restaurant 3" class="restaurant-img">
+                <div class="details">
+                    <h3>Restaurant 3</h3>
+                    <p class="rating">Rating: 4.8/5</p>
+                    <p class="location">Location: Beachside</p>
+                    <div class="feedback">
+                        <h4>Feedback:</h4>
+                        <ul>
+                            <li>"Amazing view and perfect for brunch."</li>
+                            <li>"Friendly staff and great service."</li>
+                            <li>"Try the cocktails, they’re amazing!"</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Footer Section -->
+    <footer>
+        <p>&copy; 2025 Restaurant Guide | All rights reserved.</p>
+    </footer>
+
+</body>
+
+</html>

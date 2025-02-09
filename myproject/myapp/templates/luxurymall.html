@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Luxury Mall</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f9fa;
+            color: #333;
+        }
+
+        /* Header Section */
+        header {
+            background: linear-gradient(45deg, #000428, #004e92);
+            color: white;
+            text-align: center;
+            padding: 50px 0;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 3.5em;
+            font-weight: bold;
+        }
+
+        header p {
+            font-size: 1.2em;
+            margin-top: 10px;
+        }
+
+        /* Navigation Bar */
+        .nav-bar {
+            background-color: #212529;
+            color: white;
+            text-align: center;
+            padding: 15px;
+        }
+
+        .nav-bar a {
+            color: white;
+            text-decoration: none;
+            font-size: 1.2em;
+            margin: 0 20px;
+        }
+
+        .nav-bar a:hover {
+            color: #f0ad4e;
+            text-decoration: underline;
+        }
+
+        /* Product Showcase Section */
+        .product-showcase {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            margin: 40px 20px;
+        }
+
+        .product-card {
+            background-color: white;
+            width: 28%;
+            margin: 15px;
+            border-radius: 12px;
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .product-card:hover {
+            transform: scale(1.05);
+        }
+
+        .product-img {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+            border-top-left-radius: 12px;
+            border-top-right-radius: 12px;
+        }
+
+        .product-info {
+            padding: 20px;
+            text-align: center;
+        }
+
+        .product-info h3 {
+            font-size: 1.8em;
+            color: #343a40;
+            margin-bottom: 10px;
+        }
+
+        .product-info p {
+            font-size: 1.2em;
+            color: #6c757d;
+            margin-bottom: 15px;
+        }
+
+        .product-info button {
+            background-color: #f0ad4e;
+            color: white;
+            border: none;
+            padding: 12px 20px;
+            font-size: 1.1em;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .product-info button:hover {
+            background-color: #d9534f;
+        }
+
+        /* Footer Section */
+        footer {
+            background-color: #212529;
+            color: white;
+            text-align: center;
+            padding: 30px 0;
+        }
+
+        footer p {
+            font-size: 1em;
+        }
+
+        footer a {
+            color: #f0ad4e;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        /* Media Query for Responsiveness */
+        @media screen and (max-width: 768px) {
+            .product-card {
+                width: 45%;
+            }
+        }
+
+        @media screen and (max-width: 480px) {
+            .product-card {
+                width: 90%;
+            }
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <!-- Header Section -->
+    <header>
+        <h1>Welcome to Luxury Mall</h1>
+        <p>Your Ultimate Shopping Destination for Premium Brands</p>
+    </header>
+
+    <!-- Navigation Bar -->
+    <div class="nav-bar">
+        <a href="#">Home</a>
+        <a href="#">Shops</a>
+        <a href="#">Events</a>
+        <a href="#">Contact</a>
+        <a href="#">About</a>
+    </div>
+
+    <!-- Product Showcase Section -->
+    <div class="product-showcase">
+
+        <!-- Product 1 -->
+        <div class="product-card">
+            <img src="https://via.placeholder.com/400" alt="Luxury Product 1" class="product-img">
+            <div class="product-info">
+                <h3>Luxury Watch</h3>
+                <p>$2,500</p>
+                <button>Shop Now</button>
+            </div>
+        </div>
+
+        <!-- Product 2 -->
+        <div class="product-card">
+            <img src="https://via.placeholder.com/400" alt="Luxury Product 2" class="product-img">
+            <div class="product-info">
+                <h3>Designer Bag</h3>
+                <p>$1,800</p>
+                <button>Shop Now</button>
+            </div>
+        </div>
+
+        <!-- Product 3 -->
+        <div class="product-card">
+            <img src="https://via.placeholder.com/400" alt="Luxury Product 3" class="product-img">
+            <div class="product-info">
+                <h3>Exclusive Shoes</h3>
+                <p>$1,200</p>
+                <button>Shop Now</button>
+            </div>
+        </div>
+
+        <!-- Product 4 -->
+        <div class="product-card">
+            <img src="https://via.placeholder.com/400" alt="Luxury Product 4" class="product-img">
+            <div class="product-info">
+                <h3>High-end Sunglasses</h3>
+                <p>$600</p>
+                <button>Shop Now</button>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Footer Section -->
+    <footer>
+        <p>&copy; 2025 Luxury Mall | All Rights Reserved</p>
+        <p>Visit us at <a href="#">luxurymall.com</a></p>
+    </footer>
+
+</body>
+
+</html>
